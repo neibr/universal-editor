@@ -1,9 +1,8 @@
 
 
-import DataSource from './dataSource.js';
+import DataSource from '../../src/module/classes/dataSource.js';
 (function() {
   'use strict';
-  //require('./dataSource.js');
   describe('DataSource class tests', function() {
     let options = {
       standard: 'YiiSoft',
