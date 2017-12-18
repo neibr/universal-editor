@@ -13,21 +13,6 @@
             groups = {},
             collection = [];
 
-        this.getLevelChild = function(stateName) {
-            return stateName.split('.').length;
-        };
-
-        this.getValueField = function(componentId, fieldName) {
-            var controllers = storage[componentId] || [];
-            for (var i = controllers.length; i--;) {
-                var controller = controllers[i];
-                if (controller.fieldName === fieldName) {
-                    return controller.getFieldValue();
-                }
-            }
-            return false;
-        };
-
         this.getComponentBySetting = function(id) {
             var model = null;
             if (angular.isObject(id) && id.component) {

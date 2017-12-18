@@ -87,7 +87,7 @@
         .module('universal-editor')
         .run(universalEditorRun);
 
-    function universalEditorRun($rootScope, $location, $state, EditEntityStorage, FilterFieldsStorage, ApiService) {
+    function universalEditorRun($rootScope, $location, $state, FilterFieldsStorage, ApiService) {
         'ngInject';
         var itemsSelector = document.querySelectorAll('.nav.nav-tabs .item');
 
@@ -112,11 +112,5 @@
         if (itemsSelector.length == 1) {
             angular.element(itemsSelector).css('display', 'none');
         }
-        angular.element(document).ready(function() {
-            var pk = $state.params['pk' + EditEntityStorage.getLevelChild($state.current.name)];
-            if (pk === 'new') {
-                EditEntityStorage.newSourceEntity();
-            }
-        });
     }
 })();

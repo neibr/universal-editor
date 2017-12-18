@@ -5,3 +5,4 @@ tests
 npm-debug.log
 /app
 /.vscode
+/yarn.lock

@@ -106,7 +106,6 @@
             }
         }
 
-
         function getFilterFieldController(id) {
             if (id && storage[id]) {
                 return storage[id];
